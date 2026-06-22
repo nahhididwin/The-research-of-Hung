@@ -94,7 +94,7 @@ Expected Outcome :
 A foundational mathematical system enabling expression-native computation at speed and decidability to exceeding scalar-based approaches, while preserving structural information lost in traditional decomposition.
 
 
-Giải thích kỹ thêm bằng Tiếng Việt :
+**Giải thích kỹ thêm bằng Tiếng Việt :**
 
 Đây là cổ điển :
 
@@ -130,3 +130,64 @@ Và tốc độ là khủng khiếp, vì nó vứt luôn bước "Computation" (
 Hệ thống này có thể chạy trên kiến trúc phần cứng nhị phân (0-1) cổ điển thông qua một lớp phần mềm/trình biên dịch hoàn toàn mới chăng ? ;
 
 Lưu ý rằng chúng ta sẽ phải đối mặt với việc tạo ra một không gian toán học mà ở đó bản thân các Biểu thức (Expressions) mang sẵn thuộc tính hình học/topo để lộ ra 3 điều trên (Comparability, "Total Order", "Distance"), thì quá trình tính toán cơ học (Computation) bị loại bỏ hoàn toàn.
+
+
+**Some clues are provided, however, please note that these are only "clues" and not the solution:**
+
+
+Câu hỏi : Nếu chúng ta tạm gác lại các con số truyền thống, hình dung ra được một mô hình hoặc "hình dáng" không gian nào có thể biểu diễn được một phép nhân so với một phép cộng, để khi nhìn vào cấu trúc của chúng, ta lập tức thấy được khoảng cách (gap) mà không cần phải làm toán trông như nào ? :
+
+Trả lời :
+
+Dùng thẳng hệ unary (nhất phân) ; Tức là kiểu như :
+
+Nhìn nhé :
+
+Biểu thức A :
+
+1 + 2 = B
+
+Biểu thức B :
+
+2 + 2 = B
+
+Không gian toán học cấu trúc hình học :
+
+A -> 111
+
+B -> 1111
+
+Ngay lập tức thấy được những gì ta cần thấy ; Tuy nhiên nó mới chỉ là một phần cực kỳ nhỏ của khung lý thuyết chúng ta đang cần tìm thôi ; 
+
+Hệ nhất phân (Unary) có lẽ là ví dụ nguyên thủy nhất của việc biến "Giá trị" (Value) thành "Độ đo vật lý/Hình học" (Physical Length/Metric).
+
+Trong không gian Unary 1 chiều này, tính toán cơ học (Computation) thực sự bị triệt tiêu, nhường chỗ cho sự đối chiếu hình dáng.
+
+Tuy nhiên, như tôi đã tự nhận định, đây mới chỉ là một góc siêu nhỏ của khung lý thuyết. Tại sao hệ Unary không thể là câu trả lời cuối cùng ? :
+
+Đó là vì nó gặp khó khăn với một định đề cốt lõi trong bản sketch: "Computational cost: far superior to scalar computation" (Chi phí tính toán phải vượt trội hơn tính toán vô hướng). Và vấn đề "Bùng nổ không gian biểu diễn" ;
+
+Hãy thử đưa hệ Unary vào một "bài kiểm tra thực tế" (Stress test):
+
+Biểu thức $C = 1000 \times 1000$
+
+Biểu thức $D = 10^6 + 1$
+
+Nếu dùng hệ Unary thuần túy để xây dựng không gian này, máy tính sẽ phải sinh ra một chuỗi gồm 1 triệu chữ số 1 cho biểu thức C. Quá trình bạn sinh ra các chữ số 1 đó, hay nói cách khác là "giải nén" (unroll) biểu thức thành chuỗi Unary, thực chất lại chính là Computation. Mặc dù chúng ta có thể tận dụng Kỹ thuật (cụ thể là tính toán song song), tuy nhiên nó không hề ổn.
+
+Hệ vô hướng (Nhị phân - Binary/Scalar) chỉ cần khoảng 20 bit (chưa tới 3 byte) để biểu diễn số 1 triệu, và mất đúng 1 chu kỳ xung nhịp của CPU để so sánh. Trong khi đó, hệ Unary tốn $O(V)$ không gian bộ nhớ (với $V$ là giá trị của biểu thức) – một sự bùng nổ dữ liệu không thể kiểm soát.
+
+Nâng cấp cấu trúc: Từ Đường thẳng đến "Các nếp gấp không gian" :
+
+Hệ Unary là một đường thẳng (Không gian 1D). Điểm yếu của đường thẳng là nó tiêu tốn không gian vật lý tỷ lệ thuận với độ lớn của biểu thức.
+
+
+Để cứu vãn ý tưởng "đối chiếu cấu trúc" tuyệt vời của hệ Unary mà không bị bùng nổ bộ nhớ, chúng ta cần đem hình học topo vào cuộc. Thay vì xếp các chữ số 1 thành một đường thẳng vô tận, ta phải "gấp" (fold) chúng lại thành các cấu trúc đa chiều, hoặc các đồ thị phân dạng (Fractal Graphs)?
+
+Trong không gian mới này, phép cộng ($+$) có thể là thao tác nối hai cấu trúc lại với nhau, trong khi phép nhân ($\times$) không phải là tạo ra vô số các bản sao, mà là tạo ra một "chiều không gian mới" trực giao với chiều ban đầu. Khi đó, việc so sánh $A$ và $B$ biến thành việc so sánh số chiều, số nếp gấp, hoặc hình chiếu của hai khối hình học đó?
+
+Làm thế nào để chúng ta có thể "nén" cái không gian Unary khổng lồ (ví dụ 10^6 * 10^6) thành một cấu trúc hình học nhỏ gọn, sao cho máy tính chỉ cần lướt qua các "nếp gấp" của nó là lập tức nhìn thấy được khoảng cách và thứ tự so với một biểu thức khác mà không cần phải thực sự trải dài tất cả các điểm 1 ra?
+
+
+
+
