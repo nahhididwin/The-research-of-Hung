@@ -3,7 +3,7 @@
 
 **Authors:** Hung Dinh Phu Dang  
 
-**Date:** 17-18, June 2026  
+**Date:** 17-18-22, June 2026  
 
 Ý tôi muốn nói là phải giải quyết được bài toán bên dưới một cách cực kỳ "thanh lịch" thông qua việc tạo ra một nền tảng không gian toán học mới (Cách giải quyết thanh lịch nhất lịch sử ?) :
 
