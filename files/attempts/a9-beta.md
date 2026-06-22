@@ -48,9 +48,9 @@ We propose exchanging generality for decidability and efficiency:
 
 Input Restriction:
 
-N expressions containing only:
+N expressions containing only :
 
-Basic arithmetic operations: {+, −, ×, ÷}
+Basic arithmetic operations: {+, −, ×, ÷} (Richardson's theorem)
 
 Real numbers with finite precision
 
