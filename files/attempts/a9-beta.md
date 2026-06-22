@@ -127,4 +127,6 @@ Không cần tính ra scalars, có thể sử dụng trực tiếp Expressions v
 Và tốc độ là khủng khiếp, vì nó vứt luôn bước "Computation" (nếu so sánh với xử lý cổ điển) ; Đơn giản là vì dùng thẳng Expressions ;
 
 
+Hệ thống này có thể chạy trên kiến trúc phần cứng nhị phân (0-1) cổ điển thông qua một lớp phần mềm/trình biên dịch hoàn toàn mới chăng ? ;
 
+Lưu ý rằng chúng ta sẽ phải đối mặt với việc tạo ra một không gian toán học mà ở đó bản thân các Biểu thức (Expressions) mang sẵn thuộc tính hình học/topo để lộ ra 3 điều trên (Comparability, "Total Order", "Distance"), thì quá trình tính toán cơ học (Computation) bị loại bỏ hoàn toàn.
