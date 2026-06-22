@@ -135,7 +135,7 @@ Lưu ý rằng chúng ta sẽ phải đối mặt với việc tạo ra một kh
 **Some clues are provided, however, please note that these are only "clues" and not the solution:**
 
 
-Câu hỏi : Nếu chúng ta tạm gác lại các con số truyền thống, hình dung ra được một mô hình hoặc "hình dáng" không gian nào có thể biểu diễn được một phép nhân so với một phép cộng, để khi nhìn vào cấu trúc của chúng, ta lập tức thấy được khoảng cách (gap) mà không cần phải làm toán trông như nào ? :
+Câu hỏi : "Nếu chúng ta tạm gác lại các con số truyền thống, hình dung ra được một mô hình hoặc "hình dáng" không gian nào có thể biểu diễn được một phép nhân so với một phép cộng, để khi nhìn vào cấu trúc của chúng, ta lập tức thấy được khoảng cách (gap) mà không cần phải làm toán trông như nào ?"
 
 Trả lời :
 
@@ -177,17 +177,11 @@ Nếu dùng hệ Unary thuần túy để xây dựng không gian này, máy tí
 
 Hệ vô hướng (Nhị phân - Binary/Scalar) chỉ cần khoảng 20 bit (chưa tới 3 byte) để biểu diễn số 1 triệu, và mất đúng 1 chu kỳ xung nhịp của CPU để so sánh. Trong khi đó, hệ Unary tốn $O(V)$ không gian bộ nhớ (với $V$ là giá trị của biểu thức) – một sự bùng nổ dữ liệu không thể kiểm soát.
 
-Nâng cấp cấu trúc: Từ Đường thẳng đến "Các nếp gấp không gian" :
+Nếu như câu hỏi là : "Làm sao để có thể tránh được việc bùng nổ bộ nhớ của unary?"
 
-Hệ Unary là một đường thẳng (Không gian 1D). Điểm yếu của đường thẳng là nó tiêu tốn không gian vật lý tỷ lệ thuận với độ lớn của biểu thức.
+Thì có một cách cực kỳ tối ưu đó là sử dụng scalar, bạn hiểu ý tôi mà, đếm "số lượng số '1'" và biến nó thành scalar thôi ;
 
+Cơ mà nếu làm việc đó thì lại thành vô nghĩa.
 
-Để cứu vãn ý tưởng "đối chiếu cấu trúc" tuyệt vời của hệ Unary mà không bị bùng nổ bộ nhớ, chúng ta cần đem hình học topo vào cuộc. Thay vì xếp các chữ số 1 thành một đường thẳng vô tận, ta phải "gấp" (fold) chúng lại thành các cấu trúc đa chiều, hoặc các đồ thị phân dạng (Fractal Graphs)?
-
-Trong không gian mới này, phép cộng ($+$) có thể là thao tác nối hai cấu trúc lại với nhau, trong khi phép nhân ($\times$) không phải là tạo ra vô số các bản sao, mà là tạo ra một "chiều không gian mới" trực giao với chiều ban đầu. Khi đó, việc so sánh $A$ và $B$ biến thành việc so sánh số chiều, số nếp gấp, hoặc hình chiếu của hai khối hình học đó?
-
-Làm thế nào để chúng ta có thể "nén" cái không gian Unary khổng lồ (ví dụ 10^6 * 10^6) thành một cấu trúc hình học nhỏ gọn, sao cho máy tính chỉ cần lướt qua các "nếp gấp" của nó là lập tức nhìn thấy được khoảng cách và thứ tự so với một biểu thức khác mà không cần phải thực sự trải dài tất cả các điểm 1 ra?
-
-
-
+Thực tế ý nghĩa của 2 câu hỏi và 2 câu trả lời trên là để chứng minh rằng 2 câu hỏi độc lập đều có 2 câu trả lời độc lập khả thi. Và chúng ta còn phải tìm nhiều điểm khác nữa, và giao thoa chúng, tạo ra một nền tảng toán học thật sự mới để thống nhất và đạt được mục tiêu ?
 
