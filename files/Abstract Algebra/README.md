@@ -1,11 +1,12 @@
 # List :
 
-Finite Fields, Galois Fields - $GF(p^n)$
 
-Group Theory & Ring Theory
 
-Category Theory
+1. Multilinear Algebra & Representation Theory
 
-Multilinear Algebra & Representation Theory
+2. Group Theory & Ring Theory
 
+3. Finite Fields, Galois Fields $GF(p^n)$
+
+4. Category Theory
 
