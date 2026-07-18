@@ -185,3 +185,7 @@ Cơ mà nếu làm việc đó thì lại thành vô nghĩa.
 
 Thực tế ý nghĩa của 2 câu hỏi và 2 câu trả lời trên là để chứng minh rằng 2 câu hỏi độc lập đều có 2 câu trả lời độc lập khả thi. Và chúng ta còn phải tìm nhiều điểm khác nữa, và giao thoa chúng, tạo ra một nền tảng toán học thật sự mới để thống nhất và đạt được mục tiêu ?
 
+Thực tế thì có thể gần như chắc chắn sẽ là :
+
+Nó sẽ không "tiêu diệt" Computation, mà nó định nghĩa lại Computation. Thay vì Computation = "Tính toán số học" (Arithmetic), hệ thống sẽ biến Computation = "Duyệt và Cắt tỉa Đồ thị/Hình học" (Graph/Geometric Routing) hay gì đó?
+
