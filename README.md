@@ -16,7 +16,7 @@ Hung's Research
 
 **Mở rộng thêm ý tưởng gốc** : https://github.com/nahhididwin/The-research-of-Hung/blob/main/files/attempts/a9-beta.md
 
-**Cách giải quyết cho một số lớp bài toán so sánh liên quan đến Inner Products/Convolution với mức độ phổ biến cao, Thay thế phép tính vô hướng bằng phép sắp xếp hình học** : https://github.com/nahhididwin/The-research-of-Hung/blob/main/files/Releases/A1.md
+**Relational Inner-Product Algebra (RIA) và Relational-LSH: So sánh thứ tự inner-products qua biểu diễn nén và khoảng lười (lazy intervals)** : https://github.com/nahhididwin/The-research-of-Hung/blob/main/files/Releases/A2.1.md
 
 
 
