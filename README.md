@@ -16,7 +16,7 @@ Hung's Research
 
 **Mở rộng thêm ý tưởng gốc** : https://github.com/nahhididwin/The-research-of-Hung/blob/main/files/attempts/a9-beta.md
 
-**Relational Inner-Product Algebra (RIA) và Relational-LSH: So sánh thứ tự inner-products qua biểu diễn nén và khoảng lười (lazy intervals)** : https://github.com/nahhididwin/The-research-of-Hung/blob/main/files/Releases/A2.1.md
+
 
 
 
